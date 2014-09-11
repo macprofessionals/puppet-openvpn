@@ -73,7 +73,6 @@ define openvpn::client_specific_config(
 ) {
 
   Openvpn::Server[$server] ->
-  Openvpn::Client[$name] ->
   Openvpn::Client_specific_config[$name]
 
   file { "/etc/openvpn/${server}/client-configs/${name}":
